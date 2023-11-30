@@ -1,1 +1,42 @@
-#Style CSS pour le site
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="video-list">
+  <div class="video-item" onclick="changeVideo('match.mp4', 'France - Argentine')">France - Argentine</div>
+  <div class="video-item" onclick="changeVideo('match2.mp4', 'TFrance - Uruguay')">France - Uruguay</div>
+  <div class="video-item" onclick="changeVideo('matche3.mp4', 'France - Croatie')">France - Croatie</div>
+</div>
+
+<div class="video-container">
+  <video id="videoPlayer" controls>
+    <source src="match.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <h2 id="videoTitle">France - Argentine</h2>
+</div>
+
+<script>
+  function changeVideo(videoSrc, videoTitle, audioSrc) {
+    var videoPlayer = document.getElementById('videoPlayer');
+    var audioPlayer = document.getElementById('audioPlayer');
+    var videoTitleElement = document.getElementById('videoTitle');
+    
+    videoPlayer.src = videoSrc;
+    videoTitleElement.innerText = videoTitle;
+    videoPlayer.load();
+    videoPlayer.play();
+
+    audioPlayer.src = audioSrc;
+    audioPlayer.load();
+    audioPlayer.play();
+  }
+</script>
+
+</body>
+</html>
