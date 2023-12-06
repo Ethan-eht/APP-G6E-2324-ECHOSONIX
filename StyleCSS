@@ -8,18 +8,39 @@
 <body>
 
 <div class="video-list">
-  <div class="video-item" onclick="changeVideo('match.mp4', 'France - Argentine')">France - Argentine</div>
-  <div class="video-item" onclick="changeVideo('match2.mp4', 'TFrance - Uruguay')">France - Uruguay</div>
-  <div class="video-item" onclick="changeVideo('matche3.mp4', 'France - Croatie')">France - Croatie</div>
+  <a href="lien_vers_1_match" class="video-item" onclick="changeVideo('match.mp4', 'France - Argentine')">France - Argentine</a>
+  <a href="lien_vers_2_match" class="video-item" onclick="changeVideo('match2.mp4', 'France - Uruguay')">France - Uruguay</a>
+  <a href="lien_vers_3_match" class="video-item" onclick="changeVideo('matche3.mp4', 'France - Croatie')">France - Croatie</a>
 </div>
 
 <div class="video-container">
   <video id="videoPlayer" controls>
     <source src="match.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
   <h2 id="videoTitle">France - Argentine</h2>
+
+  <audio id="audioPlayer" controls style="display: none;">
+    <source src="audio1.mp3" type="audio/mpeg">
+  </audio>
+  <input type="range" min="0" max="1" step="0.1" value="1" id="volumeSlider" onchange="changeVolume()">
+
+  <audio id="audioPlayer" controls style="display: none;">
+    <source src="audio2.mp3" type="audio/mpeg">
+  </audio>
+  <input type="range" min="0" max="1" step="0.1" value="1" id="volumeSlider" onchange="changeVolume()">
+
+  <audio id="audioPlayer" controls style="display: none;">
+    <source src="audio3.mp3" type="audio/mpeg">
+  </audio>
+  <input type="range" min="0" max="1" step="0.1" value="1" id="volumeSlider" onchange="changeVolume()">
+
+  <audio id="audioPlayer" controls style="display: none;">
+    <source src="audio4.mp3" type="audio/mpeg">
+  </audio>
+  <input type="range" min="0" max="1" step="0.1" value="1" id="volumeSlider" onchange="changeVolume()">
 </div>
+
+
 
 <script>
   function changeVideo(videoSrc, videoTitle, audioSrc) {
@@ -35,6 +56,13 @@
     audioPlayer.src = audioSrc;
     audioPlayer.load();
     audioPlayer.play();
+
+  }
+  function changeVolume() {
+    var videoPlayer = document.getElementById('videoPlayer');
+    var volumeSlider = document.getElementById('volumeSlider');
+    
+    videoPlayer.volume = volumeSlider.value;
   }
 </script>
 
