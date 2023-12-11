@@ -1,0 +1,38 @@
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+.conteneur-video {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.video-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.video-item {
+  margin-bottom: 10px;
+}
+
+.volume-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.volume-slider {
+  margin-bottom: 10px;
+}
+
+h3, h4, h5,h6 {
+  font-size: 20px; 
+}
