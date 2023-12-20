@@ -3,23 +3,72 @@ body {
     margin: 0;
     padding: 0;
 }
-
-header, section, footer {
+header, section, footer
+{
     margin: 20px;
 }
-
-h1, h2 {
+h1, h2
+{
     color: #333;
 }
-
 section {
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
-
 footer {
     text-align: center;
     color: #888;
     font-size: 0.8em;
+}
+header
+{
+    background-color: 	rgb(61,119,68);
+    color: #fff;
+    padding: 2%;
+}
+nav ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  nav ul li
+{
+    display: inline-block;
+    margin-right: 20px;
+}
+nav ul li a
+{
+    color: #fff;
+    text-decoration: none;
+}
+a::before
+{
+   
+    content: '';
+    position: absolute;
+    background: white;
+    filter: blur(5px);
+    width: 0px;
+    height: 120%;
+    left: 0;
+    transition: .2s all;
+    z-index: -1;
+}
+a:hover::before
+{
+    width: 100%;
+}
+a
+{
+    font-size: 150%;
+    text-decoration: none;
+    position: relative;
+    transition: .2s all;
+    z-index: 1;
+}
+a:hover
+{
+    color: rgb(61,119,68);
 }
