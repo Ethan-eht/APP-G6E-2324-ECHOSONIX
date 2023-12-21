@@ -92,3 +92,20 @@ a:hover
 h3, h4, h5,h6 {
   font-size: 20px; 
 }
+
+.video-container {
+  position: relative;
+}
+
+
+.video-container button {
+  position: absolute;
+  top: 20px; 
+  right: 150px; 
+  padding: 10px 20px; 
+  background-color: green; 
+  color: black; 
+  border: none; 
+  font-size: 18px; 
+  border-radius: 5px; 
+}
