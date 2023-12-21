@@ -65,7 +65,7 @@ $password = "";
         );
 
         echo "Inscription reussi !";
-     header("Location:connexion.html");
+     header("Location:connexion.php");
 
     }
 
