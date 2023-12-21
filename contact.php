@@ -4,18 +4,7 @@
     <title>Contact</title>
 <?php include 'header.html';?>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: #f0f0f0;
-        }
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-        }
-        p {
-            margin: 0;
-        }
-    </style>
+
 </head>
 <body>
     <h1>Pour nous contacter :</h1>
