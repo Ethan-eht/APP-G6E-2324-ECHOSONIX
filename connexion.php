@@ -2,34 +2,29 @@
 
 <html lang="fr">
 
-<head>
+    <head>
+        <meta charset="UTF-8">
 
-    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Connexion</title>
 
-    <title>Connexion</title>
+        <link rel="stylesheet" href="stylelucas.css"
 
-    <link rel="stylesheet" href="stylelucas.css"
-
-    <?php
+        <?php
 
             include 'header.html';
 
-        ?>>
-
-</head>
-
- 
-
-<body>
+        ?>
+    </head>
 
  
 
-  
+
+    <body>
 
  
-
+<div>
     <form method="post" action="connexion.php">
 
     <h4>CONNEXION</h4>
@@ -48,11 +43,11 @@
 
         <br>
 
-        <p>Vous n'avez pas de compte ? <a href="inscrition.php">S'inscrire</a></p>
+        <p>Vous n'avez pas de compte ? <a href="inscription.php">S'inscrire</a></p>
 
     </form>
 
-  
+</div>
 
 </body>
 
