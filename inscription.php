@@ -73,7 +73,7 @@
 
         <br>
 
-        <p>Vous avez déjà un compte ? <a href="login.php">Se connecte </a></p>
+        <p>Vous avez déjà un compte ? <a href="connexion.php">Se connecte </a></p>
 
     </form>
 
