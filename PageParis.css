@@ -1,19 +1,29 @@
 .fieldset1
 {
-    color: blue;
     display: inline-block;
-    height: 100%;
+    height: auto;
     text-align: center;
     position: absolute;
     left: 20%;
     top: 10,5%;
     width: 50%;
+    border-radius: 10%;
 }
 header
 {
     background-color: 	rgb(61,119,68);
     color: #fff;
     padding: 2%;
+    width: 100%;
+}
+h1, h2, h4
+{
+    color: #333;
+}
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 nav ul
 {
@@ -30,15 +40,6 @@ nav ul li a
 {
     color: #fff;
     text-decoration: none;
-}
-footer
-{
-    text-align: center;
-    color: #888;
-    font-size: 0.8em;
-    position: fixed;
-    bottom: 0;
-    width: 100%; 
 }
 a::before
 {
@@ -64,6 +65,49 @@ a
     position: relative;
     transition: .2s all;
     z-index: 1;
+}
+a:hover
+{
+    color: rgb(61,119,68);
+}
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+legend
+{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+button:hover
+{
+    background-color: #45a049;
+}
+select, input[type="number"], input[type="range"]
+{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+output {
+    font-weight: bold;
+    color: #4CAF50;
+    display: inline-block;
+    margin-left: 5px;
+}
+.gain
+{
+    font-size: 150%;
 }
 a:hover
 {
