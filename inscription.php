@@ -39,7 +39,7 @@
 
                 <input type="text" id="nom" name="nom" placeholder="Entrez votre nom..." required>
 
-           
+           <br>
 
                 <label class="nom" for="prenom">Votre Prenom </label>
 
