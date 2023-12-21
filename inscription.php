@@ -25,7 +25,7 @@
 
    
 
-    <form method="POST" action="traitement.php">
+    <form method="POST" action="traitementlucas.php">
 
         <h4>INSCRIPTION</h4>
 
