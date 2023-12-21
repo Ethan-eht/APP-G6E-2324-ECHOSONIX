@@ -15,14 +15,69 @@
             </ul>
         </nav>
     </header>
+    <br>
     <body>
             <fieldset class="fieldset1">
                 <legend>Paris</legend>
                 <h1>Nom du compte</h1>
                 <h2>Solde :</h2>
+                <button href="statistiques.html"> Accéder aux statistiques</button>
+                <br>
+
+                <h4>Choisissez l'équipe sur lequel vous voulez parier :</h4>
+                <select name="Paripays">
+                    <option value="">Choix de l'équipe</option>
+                    <option value="Equipe1">Equipe 1</option>
+                    <option value="Equipe2">Equipe 2</option>
+                </select>
+                <br>
+
+                <h4>Donner une mise de départ :</h4>
+                <input type="number" id="mise" name="mise" min="10" placeholder="Mise de départ" size="50"/>
+                <br>
+
+                <h4>Et donner un pourcentage :</h4>
+                <input type="range" id="pourcentage" min="1" max="100"value="50"/>
+                <output for="pourcentage" id="outputPourcentage">50</output>
+                <br>
+
+                <h4>Ainsi qu'une durée :</h4>
+                <input type="range" id="minutes" name="minutes" min="1" max="90" value="50"/>
+                <output for="minutes" id="outputMinutes">45</output>
+                <br>
+
+                <h4>Cliquez sur ce bouton :</h4>
+                <button type="button" onclick="calculerGains()">Calculer le total</button>
+                <br>
+
+                <h4>Et voici la totalité de la somme que vous gagnerez en cas de victoire.</h4>
+                <label for="gainsPotentiels">Total récupéré :</label>
+                <output id="gainsPotentiels" class="gain">0</output>
+                <br><br>
+
+                <button>Valider la transaction</button>
+            
+                <script>
+                    function updateOutput(elementId, value) {
+                        document.getElementById(elementId).textContent = value;
+                    }
+            
+                    function calculerGains() {
+                        var pourcentage = parseFloat(document.getElementById("pourcentage").value);
+                        var miseDepart = parseFloat(document.getElementById("mise").value);
+                        var minutes = parseFloat(document.getElementById("minutes").value);
+                        var gainsPotentiels = ((pourcentage / 100) * minutes) * (miseDepart+miseDepart)*0.02;
+                        document.getElementById("gainsPotentiels").textContent = gainsPotentiels.toFixed(2) + "€";
+                    }
+            
+                    document.getElementById("pourcentage").addEventListener("input", function() {
+                        updateOutput("outputPourcentage", this.value);
+                    });
+            
+                    document.getElementById("minutes").addEventListener("input", function() {
+                        updateOutput("outputMinutes", this.value);
+                    });
+                </script>
             </fieldset>
     </body>
-    <footer>
-        <p>&copy; 2023 Sonixap. Tous droits réservés.</p>
-    </footer>
 </html>
