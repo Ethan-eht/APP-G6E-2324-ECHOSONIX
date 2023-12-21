@@ -73,7 +73,7 @@
         </script>
     
         <div id="button_paris">
-            <button class="mis_a_jour_Button">Paris</button>            
+            <button class="mis_a_jour_Button"><a href="PageParis.html">Paris</a></button>            
         </div>
 
        
