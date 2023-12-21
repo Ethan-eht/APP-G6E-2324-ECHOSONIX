@@ -42,7 +42,7 @@ $password = "";
 
                  echo " VOus ètes connecté !";
 
-                 header("Location:#");
+                 header("Location:Acceuil.html");
 
                  exit();
 
