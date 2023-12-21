@@ -1,16 +1,12 @@
 body {
 
-    background-color: #1EA831;
-
-    display: flex;
+    background-color: white;
 
     align-items: center;
 
     justify-content: center;
 
     height: 100vh;
-
-    font-family: Arial, Helvetica, sans-serif;
 
  
 
@@ -29,6 +25,12 @@ form {
     border-radius: 6px;
 
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+    margin-top: 50 px;
+
+    margin-left: 40%;
+
+    margin-right: 40%;
 
 }
 
