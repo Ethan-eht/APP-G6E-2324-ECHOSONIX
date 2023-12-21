@@ -3,7 +3,7 @@
 <head>
     <title>Contact</title>
 <?php include 'header.html';?>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecontact.css">
 
 </head>
 <body>
