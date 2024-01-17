@@ -1,4 +1,4 @@
-/* Reset default margin and padding */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,13 +15,13 @@ body {
     flex-direction: column;
 }
 
-/* Container styles */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Header styles */
+
 .header {
     background-color: #4CAF50;
     color: white;
@@ -40,7 +40,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Navigation styles */
+
 .navigation {
     text-align: center;
     padding: 15px 0;
@@ -70,7 +70,7 @@ body {
     opacity: 0.9;
 }
 
-/* Main content styles */
+
 .content {
     text-align: center;
     padding: 40px 20px;
@@ -81,7 +81,7 @@ body {
     background-color: #6c757d;
     color: white;
     padding: 20px 40px;
-    font-size: 1.5em;
+    font-size: 3em;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -100,7 +100,7 @@ body {
     height: auto;
 }
 
-/* Footer styles */
+
 .footer {
     text-align: center;
     padding: 20px;
@@ -125,7 +125,7 @@ body {
     cursor: pointer;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -182,6 +182,11 @@ body {
     float: right;
     margin-left: 5px;
 }
+
+.faq-title {
+    color: white;
+}
+
 
 .active:after {
     content: "\2212";
@@ -255,4 +260,13 @@ a
 a:hover
 {
     color: rgb(61,119,68);
+}
+
+body {
+    background-image: url('stadefoot.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
