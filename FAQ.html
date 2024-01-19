@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="karl.css">
+    <header>
+        <title>Paris</title>
+        <link rel="stylesheet" href="PageParis.css">
+        <nav>
+            <ul>
+                <li class="logo"><a href="accueil"><img src="logo (2).jpg" href="accueil.html" width="30%" height="30%"></a></li>
+                <li><a href="#">Evènements</a></li>
+                <li><a href="#">Informations</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">CGU</a></li>
+                <li><a href="#" class="inscription">Inscription</a></li>
+                <li><a href="#" class="connexion">Connexion</a></li>
+            </ul>
+        </nav>
+    </header><br><br><br>
+
+
+</head>
+<body>
+
+<div class="container">
+    <h2 class="faq-title">Foire aux questions</h2>
+    <!-- Rest of your code -->
+</div>
+
+<div class="container">
+    <div class="question">En quoi ce site se spécialise-t-il?</div>
+    <div class="answer">
+        <p><br>Ce site se spécialise dans la diffusion en direct de matchs de football tout en offrant aux utilisateurs la possibilité de contrôler les différents niveaux de son. Profitez d'une expérience immersive en ajustant le son selon vos préférences.</p><br>
+    </div>
+    <div class="question">Puis-je modifier mon profil après sa création et l'accès au site?</div>
+    <div class="answer">
+        <p><br>Oui, vous pouvez toujours modifier votre profil après sa création et même après avoir accédé au site. Notre plateforme vous offre la flexibilité nécessaire pour mettre à jour vos informations personnelles à tout moment. </p><br>
+    </div>
+    <div class="question">Comment puis-je contrôler le niveau du son?</div>
+    <div class="answer">
+        <p><br>Pour ajuster le niveau du son, vous trouverez toutes les commandes nécessaires en bas de la vidéo du match. Notre interface conviviale vous permet de personnaliser l'expérience audio en fonction de vos préférences.</p><br>
+    </div>
+    <div class="question">Puis-je regarder les matchs de la Ligue des champions sur ce site?</div>
+    <div class="answer">
+        <p><br>Oui, tous les matchs de la Ligue des champions seront diffusés sur notre plateforme. Profitez de l'action passionnante de la Ligue des champions confortablement depuis chez vous, grâce à notre service de diffusion en direct.</p><br>
+    </div>
+    <div class="question">Comment parier?</div>
+    <div class="answer">
+        <p><br> Se diriger vers la page évènement, ensuite vers statistique du match et vous aurait accés aux paris. Les paris auront lieux uniquement avant le match</p><br>
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("question");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
