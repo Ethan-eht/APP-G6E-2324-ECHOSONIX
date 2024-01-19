@@ -17,7 +17,7 @@
     </header>
     <br>
     <body>
-            <form id="myform" action="traitement.php" method="post">
+            <form id="myform" action="traitementparis.php" method="post">
             <fieldset class="fieldset1" form="myform" >
                 <legend>Paris</legend>
                 <?php
