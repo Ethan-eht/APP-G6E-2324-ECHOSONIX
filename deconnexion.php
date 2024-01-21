@@ -2,5 +2,5 @@
 session_start();
 $_SESSION = array();
 session_destroy();
-header('Location: Accueil.html');
+header('Location: accueil.php');
 ?>
