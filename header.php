@@ -11,7 +11,7 @@
     <header>
         <nav>
             <ul>
-                <li class="logo"><a href="Accueil.html"><img src="logo.jpg" href="accueil.php"></a></li>
+                <li class="logo"><a href="accueil.php"><img src="logo.jpg"></a></li>
                 <li><a href="match.html">Evènements</a></li>
                 <li><a href="pageinfo.php">Informations</a></li>
                 <li><a href="faq.php">FAQ</a></li>
