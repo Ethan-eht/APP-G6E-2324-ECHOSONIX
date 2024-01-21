@@ -81,26 +81,6 @@
 
     </form>
     
-    function validateForm() {
-            var nom = document.getElementById('nom').value;
-            var prenom = document.getElementById('prenom').value;
-            var pseudo = document.getElementById('pseudo').value;
-            var email = document.getElementById('email').value;
-            var mdp = document.getElementById('mdp').value;
-
-            if (nom == "" || prenom == "" || pseudo == "" || email == "" || mdp == "") {
-                alert("Tous les champs doivent être remplis");
-                return false;
-            }
-
-            if (!validateEmail(email)) {
-                alert("Entrez une adresse email valide.");
-                return false;
-            }
-
-            return true; 
-        }
- 
 
 </body>
 

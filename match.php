@@ -24,23 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="UTF-8">
   <title>MatchEnDirect</title>
   <link rel="stylesheet" href="match.css">
+  <?php include 'header.php'; ?>
 </head>
 <body>
-
-  <header>
-    <nav>
-      <ul>
-        <li class="logo"><a href="Accueil.html"><img src="logo.jpg" href="accueil.html" width="30%" height="30%"></a></li>
-        <li><a href="match.html">Évènements</a></li>
-        <li><a href="pageinfo.html">Informations</a></li>
-        <li><a href="FAQ.html">FAQ</a></li>
-        <li><a href="PageML.html">CGU</a></li>
-        <li><a href="contact.php">Contact</a></li>
-        <li><a href="inscription.php" class="inscription">Inscription</a></li>
-        <li><a href="connexion.php" class="connexion">Connexion</a></li>
-      </ul>
-    </nav>
-  </header>
 
   <main>
   <section class="live">
@@ -70,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <?php
         // Récupération des matchs à venir depuis la base de données
         $sql = "SELECT * FROM evenement ORDER BY heure_de_debut LIMIT 3";
-        $querry = $conn->prepare($sql);
+        $querry = $bdd->prepare($sql);
         $querry->execute();
         $result = $querry->fetchAll();
         if (count($result) > 0) {

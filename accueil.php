@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Echo Sonix</title>
-  <link rel="stylesheet" href="karl.css">
-  <header>
-    <title>Paris</title>
-    <link rel="stylesheet" href="PageParis.css">
-    <?php include 'header.php'; ?>
+        <?php include 'header.php'; ?>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Sonix</title>
+    <link rel="stylesheet" href="karl.css">
+
+    <style>
+        .info-enplus {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+
 </head>
 <body>
 
 <main class="content">
-  <button class="live">ACCÉDER AU LIVE</button>
-  <br><br><br>
-  <h1 class="info-enplus">Echo-Sonix</h1>
-  <p class="info-enplus">Préparez vous à plonger dans le monde du football en prenant le controle de votre match !</p>
-  <a href="pageinfo.html" class="info-enplus">Lire plus...</a>
+    <button class="live">ACCÉDER AU LIVE</button>
+    <p class="info-enplus" style="font-size: 50px"><br><br>SONIXAP<br><br></p>
+    <p class="info-enplus">Préparez vous à plonger dans le monde du football en prenant le controle de votre match !</p>
+    <a href="pageinfo.html" class="info-enplus">En savoir plus...</a>
 </main>
 
 </div>

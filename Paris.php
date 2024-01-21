@@ -43,7 +43,7 @@
                 }
                 ?>
                 <br><br>
-                <button href="statistiques.html"> Accéder aux statistiques</button>
+                <button href="Echo_Sonix_Statistiques_FR_AR.php"> Accéder aux statistiques</button>
                 <br>
 
                 <h4>Choisissez l'équipe sur lequel vous voulez parier :</h4>

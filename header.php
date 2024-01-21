@@ -12,7 +12,7 @@
         <nav>
             <ul>
                 <li class="logo"><a href="accueil.php"><img src="logo.jpg"></a></li>
-                <li><a href="match.html">Evènements</a></li>
+                <li><a href="match.php">Evènements</a></li>
                 <li><a href="pageinfo.php">Informations</a></li>
                 <li><a href="faq.php">FAQ</a></li>
                 <li><a href="PageML.php">CGU</a></li>

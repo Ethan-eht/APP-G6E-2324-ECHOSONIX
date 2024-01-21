@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <?php
         // Récupération des matchs à venir depuis la base de données
         $sql = "SELECT * FROM evenement ORDER BY heure_de_debut LIMIT 3";
-        $querry = $conn->prepare($sql);
+        $querry = $bdd->prepare($sql);
         $querry->execute();
         $result = $querry->fetchAll();
         if (count($result) > 0) {

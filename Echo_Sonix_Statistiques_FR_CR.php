@@ -72,8 +72,8 @@
             });
         </script>
     
-        <div id="button_paris">
-            <button class="mis_a_jour_Button">Paris</button>            
+    <div id="button_paris">
+            <a href="paris.php"><button class="mis_a_jour_Button">Paris</button></a>            
         </div>
 
        

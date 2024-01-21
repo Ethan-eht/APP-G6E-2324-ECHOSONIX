@@ -73,7 +73,7 @@
         </script>
     
         <div id="button_paris">
-            <button class="mis_a_jour_Button">Paris</button>            
+            <a href="paris.php"><button class="mis_a_jour_Button">Paris</button></a>            
         </div>
 
        
