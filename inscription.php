@@ -12,7 +12,11 @@
 
     <link rel="stylesheet" href="stylelucas.css">
 
-   
+   <?php
+
+        include 'header.php';
+
+    ?>
 
 </head>
 
@@ -76,7 +80,7 @@
         <p>Vous avez déjà un compte ? <a href="connexion.php">Se connecte </a></p>
 
     </form>
- 
+    
     function validateForm() {
             var nom = document.getElementById('nom').value;
             var prenom = document.getElementById('prenom').value;

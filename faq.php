@@ -5,20 +5,7 @@
     <title>FAQ Page</title>
     <link rel="stylesheet" href="karl.css">
 
-    <header>
-        <nav>
-            <ul>
-                <li class="logo"><a href="accueil"><img src="logo.jpeg" href="Accueil.html" width="30%" height="30%"></a></li>
-                <li><a href="match.html">Evènements</a></li>
-                <li><a href="pageinfo.html">Informations</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="PageML.html">CGU</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li><a href="inscription.php" class="inscription">Inscription</a></li>
-                <li><a href="connexion.php" class="connexion">Connexion</a></li>
-            </ul>
-        </nav>
-    </header><br><br><br>
+    <?php include 'header.php'; ?>
 
 
 </head>

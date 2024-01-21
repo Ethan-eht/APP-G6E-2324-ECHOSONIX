@@ -13,7 +13,7 @@
 
         <?php
 
-            include 'header.html';
+            include 'header.php';
 
         ?>
     </head>

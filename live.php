@@ -38,22 +38,9 @@ try {
     <meta charset="UTF-8">
     <title>Video Player with Live Microphone Data</title>
     <link rel="stylesheet" href="live.css">
+    <?php include 'header.php'; ?>
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li class="logo"><a href="accueil"><img src="logo.jpeg" href="accueil.html" width="30%" height="30%"></a></li>
-            <li><a href="#">Evènements</a></li>
-            <li><a href="#">Informations</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">CGU</a></li>
-            <li><a href="#" class="inscription">Inscription</a></li>
-            <li><a href="#" class="connexion">Connexion</a></li>
-        </ul>
-
-    </nav>
-</header>
 <div class="video-list">
     <a href="lien_vers_1_match" class="video-item" onclick="changeVideo('match.mp4', 'France - Argentine')">France - Argentine</a>
     <a href="lien_vers_2_match" class="video-item" onclick="changeVideo('match2.mp4', 'France - Uruguay')">France - Uruguay</a>
