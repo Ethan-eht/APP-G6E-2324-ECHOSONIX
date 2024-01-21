@@ -11,9 +11,9 @@
     <header>
         <nav>
             <ul>
-                <li class="logo"><a href="Accueil.html"><img src="logo.jpg" href="Accueil.html"></a></li>
+                <li class="logo"><a href="Accueil.html"><img src="logo.jpg" href="accueil.php"></a></li>
                 <li><a href="match.html">Evènements</a></li>
-                <li><a href="pageinfo.html">Informations</a></li>
+                <li><a href="pageinfo.php">Informations</a></li>
                 <li><a href="faq.php">FAQ</a></li>
                 <li><a href="PageML.php">CGU</a></li>
                 <li><a href="contact.php">Contact</a></li>
