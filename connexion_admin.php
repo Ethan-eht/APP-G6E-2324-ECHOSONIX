@@ -91,12 +91,9 @@ if (isset($_POST['valider'])) {
         }
 
         .image {
-            width: 200px;
-            height: 200px;
-            border: black 2px solid;
-            border-radius: 25%;
-            margin-left:  10%;
-            
+            width: 100%;
+            height: 100%;
+            border: black 3px solid;            
         }
     </style>
 </head>
@@ -105,7 +102,7 @@ if (isset($_POST['valider'])) {
     <h1>Espace de connexion admin</h1>
     <form method="POST" action="" align="center">
 
-        <img src="logoadmin.jpg" alt="Logo Admin" class="image">
+        <img src="header.jpg" alt="Logo Admin" class="image">
         <br><br>
         <input type="text" name="pseudo" placeholder="Nom d'utilisateur" autocomplete="off">
         <br><br>
