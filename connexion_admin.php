@@ -1,28 +1,48 @@
 <?php
 session_start();
-if(isset($_POST['valider'])){
-    if(!empty($_POST['pseudo']) && !empty($_POST['mdp'])){
-        $pseudo_par_defaut = "admin";
-        $mdp_par_defaut = "admin123";
 
+if (isset($_POST['valider'])) {
+    if (!empty($_POST['pseudo']) && !empty($_POST['mdp'])) {
         $pseudo_saisi = htmlspecialchars($_POST['pseudo']);
         $mdp_saisi = htmlspecialchars($_POST['mdp']);
 
-        if($pseudo_saisi == $pseudo_par_defaut && $mdp_saisi == $mdp_par_defaut){
+        // Connexion à la base de données
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "mydb";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+            die("Erreur de connexion à la base de données: " . $conn->connect_error);
+        }
+
+        // Requête pour vérifier les informations d'identification
+        $sql = "SELECT * FROM administrateurs WHERE nom = '$pseudo_saisi' AND mdp = '$mdp_saisi'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows == 1) {
+            // Informations d'identification valides, définir les variables de session et rediriger vers le tableau de bord
             $_SESSION['pseudo'] = $pseudo_saisi;
             $_SESSION['mdp'] = $mdp_saisi;
-            header('Location: dashboard.html');
-        }else{
-            echo "Votre mot de passe ou pseudo est incorrect";
+            header('Location: dashboard.php');
+        } else {
+            // Informations d'identification incorrectes
+            echo '<p class="error-message">Votre nom d\'utilisateur ou mot de passe est incorrect</p>';
         }
-    }else{
-        echo "Veuillez remplir tous les champs";
+
+        $conn->close();
     }
 }
+
+
+
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Espace de connexion admin</title>
     <meta charset="utf-8">
@@ -69,11 +89,24 @@ if(isset($_POST['valider'])){
             color: red;
             text-align: center;
         }
+
+        .image {
+            width: 200px;
+            height: 200px;
+            border: black 2px solid;
+            border-radius: 25%;
+            margin-left:  10%;
+            
+        }
     </style>
 </head>
+
 <body>
     <h1>Espace de connexion admin</h1>
     <form method="POST" action="" align="center">
+
+        <img src="logoadmin.jpg" alt="Logo Admin" class="image">
+        <br><br>
         <input type="text" name="pseudo" placeholder="Nom d'utilisateur" autocomplete="off">
         <br><br>
         <input type="password" name="mdp" placeholder="Mot de passe">
@@ -81,9 +114,11 @@ if(isset($_POST['valider'])){
         <input type="submit" name="valider" value="Se connecter">
     </form>
     <?php
-    if(isset($_POST['valider']) && (empty($_POST['pseudo']) || empty($_POST['mdp']))){
+    if (isset($_POST['valider']) && (empty($_POST['pseudo']) || empty($_POST['mdp']))) {
         echo '<p class="error-message">Veuillez remplir tous les champs</p>';
     }
     ?>
+
 </body>
+
 </html>

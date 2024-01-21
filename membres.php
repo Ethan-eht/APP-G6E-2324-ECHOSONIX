@@ -1,6 +1,6 @@
 <?php 
         session_start();
-        $bdd = new PDO( 'mysql:host=localhost;dbname=espace-admin;', 'root', '');
+        $bdd = new PDO( 'mysql:host=localhost;dbname=mydb;', 'root', '');
         if(!$_SESSION['mdp']){
             header('Location: connexion_admin.php');
         }
