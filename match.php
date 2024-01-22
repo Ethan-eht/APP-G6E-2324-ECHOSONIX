@@ -34,17 +34,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <div class="match">
         <div class="match1">
           <div class="team">France</div>
-          <a href="live.html" class="score">1 - 1</a>
+          <a href="live.php" class="score">1 - 1</a>
           <div class="team">Argentine</div>
         </div>
         <div class="match2">
           <div class="team">France</div>
-          <a href="live.html" class="score">2 - 0</a>
+          <a href="live.php" class="score">2 - 0</a>
           <div class="team">Croatie</div>
         </div>
         <div class="match3">
           <div class="team">France</div>
-          <a href="live.html" class="score">1 - 0</a>
+          <a href="live.php" class="score">1 - 0</a>
           <div class="team">Uruguay</div>
         </div>
       </div>      
