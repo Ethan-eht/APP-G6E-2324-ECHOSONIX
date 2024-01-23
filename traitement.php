@@ -1,28 +1,8 @@
 <?php
 
-$servername = "localhost";
+session_start();
 
-$username = "root";
-
-$password = "";
-
- 
-
-    try {
-
-        $bdd = new PDO("mysql:host=$servername; dbname=inscription", $username, $password);
-
-        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    }
-
-    catch(PDOException $e){
-
-        echo "Erreur : ". $e->getMessage();
-
- 
-
-    }
+include 'dbconnect.php';
 
  
 
@@ -38,33 +18,36 @@ $password = "";
 
         $email= $_POST['email'];
 
- 
+        $id= $_SESSION['id'];
 
-        $requete = $bdd->prepare(" INSERT INTO user VALUES (0, :pseudo, :nom, :prenom, :mdp, :email)");
 
-        $requete->execute (
 
-            array(
+            $requete = $bdd->prepare("UPDATE user SET pseudo = :pseudo, nom = :nom, prenom = :prenom, mdp = :mdp, email = :email WHERE id = :id");
 
-                "pseudo"=> $pseudo,
+            $requete->execute (
+    
+                array(
+    
+                    "pseudo"=> $pseudo,
+    
+                    "nom"=> $nom,
+    
+                    "prenom"=> $prenom,
+    
+                    "mdp"=> $mdp,
+    
+                    "email"=> $email,
 
-                "nom"=> $nom,
+                    "id"=> $id,
+     
+    
+                )
+    
+            );
 
-                "prenom"=> $prenom,
 
-                "mdp"=> $mdp,
 
-                "email"=> $email
-
-               
-
- 
-
-            )
-
-        );
-
-        echo "Enregistré!";
+       header("Location: pageprofil.php");
 
     }
 

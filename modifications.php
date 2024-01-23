@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,21 +29,23 @@
 <h1> MODIFICATIONS</h1>
     <form method="POST" action="traitement.php">
         <label for="nom">Votre nom </label>
-        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom..." required>
+        <input type="text" id="nom" name="nom" placeholder="<?php echo $_SESSION['nom'] ?>" >
         <br>
         <label for="prenom">Votre prenom </label>
-        <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prenom..." >
+        <input type="text" id="prenom" name="prenom" placeholder="<?php echo $_SESSION['prenom'] ?>" >
         <br>
         <label for="pseudo">Votre pseudo </label>
-        <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo...">
+        <input type="text" id="pseudo" name="pseudo" placeholder="<?php echo $_SESSION['pseudo'] ?>">
         <br>
         <label for="email">Votre email</label>
-        <input type="text" id="email" name="email" placeholder="Entrez votre email...">
+        <input type="text" id="email" name="email" placeholder="<?php echo $_SESSION['email'] ?>">
         <br>
         <label for="mdp">Votre mdp </label>
-        <input type="password" id="mdp" name="mdp" placeholder="Entrez votre mdp...">
+        <input type="password" id="mdp" name="mdp" placeholder="<?php echo $_SESSION['mdp'] ?>">
         <br>
         <input type="submit" value="Enregister" name="ok">
+
+        
     </form>
 
 </body>
