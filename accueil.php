@@ -23,7 +23,7 @@
     <button class="live">ACCÉDER AU LIVE</button>
     <p class="info-enplus" style="font-size: 50px"><br><br>SONIXAP<br><br></p>
     <p class="info-enplus">Préparez vous à plonger dans le monde du football en prenant le controle de votre match !</p>
-    <a href="pageinfo.html" class="info-enplus">En savoir plus...</a>
+    <a href="pageinfo.php" class="info-enplus">En savoir plus...</a>
 </main>
 
 </div>
