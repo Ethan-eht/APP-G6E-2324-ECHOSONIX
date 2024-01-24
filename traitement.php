@@ -22,7 +22,7 @@ include 'dbconnect.php';
 
 
 
-            $requete = $bdd->prepare("UPDATE user SET pseudo = :pseudo, nom = :nom, prenom = :prenom, mdp = :mdp, email = :email WHERE id = :id");
+            $requete = $bdd->prepare("UPDATE utilisateurs SET pseudo = :pseudo, nom = :nom, prenom = :prenom, mdp = :mdp, mail = :email WHERE id = :id");
 
             $requete->execute (
     
