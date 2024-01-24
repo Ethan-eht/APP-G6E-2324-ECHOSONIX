@@ -30,9 +30,7 @@ include "header.php";
         <label for="mdp">Votre mdp </label>
         <input type="password" id="mdp" name="mdp">
         <br>
-        <input type="submit" value="Enregister" name="ok">
-
-        
+        <input type="submit" value="Enregister" name="ok" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
     </form>
 
 </body>
