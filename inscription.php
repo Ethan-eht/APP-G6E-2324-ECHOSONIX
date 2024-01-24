@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="stylelucas.css">
 
+    <script src="index.js"></script>
+
     <?php
 
     include 'header.php';
