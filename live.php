@@ -74,7 +74,7 @@ try {
     <div class="chat_video_mess" >
         <div class="video-container">
             <a href="Echo_Sonix_Statistiques_FR_AR.php">
-                <button style="color: white;">Statistique</button></a>
+                <button style="color: white;">Statistiques</button></a>
                 
             <video id="videoPlayer" controls>
                 <source src="match.mp4" type="video/mp4">
