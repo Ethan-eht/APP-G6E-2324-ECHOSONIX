@@ -28,6 +28,7 @@ try {
     var_dump ($tribute_dom) ;
     var_dump ($tribute_arbitre) ;
     var_dump($tribute_exte[0]['valeur']);*/
+    
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
@@ -39,6 +40,7 @@ try {
     <title>Video Player with Live Microphone Data</title>
     <link rel="stylesheet" href="live.css">
     <?php include 'header.php'; ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="video-list">
@@ -56,9 +58,9 @@ try {
 </div>
 
 
-
+<div class="chat_video_mess">
 <div class="video-container">
-    <a href="Echo_Sonix_Statistiques_FR_AR.php">
+    <a href="cyriaqueetsamerde.html">
         <button>Statistique</button>
     </a>
     <video id="videoPlayer" controls>
@@ -91,7 +93,48 @@ try {
     <input type="range" min="0" max="1" step="0.1" value="1" id="volumeSlider" onchange="changeVolume()">
 </div>
 
+<div class="boite_message">
+    <h1>Chat</h1>
+    <?php if(isset($_POST['envoyer'])){
+        if(!empty($_POST['pseudo']) AND !empty($_POST['message'])){
+            $pseudo=htmlspecialchars($_POST['pseudo']);
+            $message=nl2br(htmlspecialchars($_POST['message']));
+            $evt=$_POST['evenement'];
+            $inserer_message= $bdd->prepare('INSERT INTO chat(username,contenu,Evenement_idEvenement) VALUES (?, ?,?)');
+            $inserer_message->execute(array($pseudo, $message,$evt));
+        }
+    }
+    ?>
+<form method="POST" action="">
+            <?php
+            $exe=$bdd->prepare("SELECT idevenement, equipe_1, equipe_2 FROM evenement");
+            $exe->execute();
+                echo '<select name="evenement">';
+                while ($row= $exe->fetch(PDO::FETCH_ASSOC)){
+                    echo '<option value="'.htmlspecialchars($row['idevenement']). '">'. htmlspecialchars($row['equipe_1']).'-'. htmlspecialchars($row['equipe_2']). '</option>';
+                }
+            
+                
+            ?>
+            <br>
+            <br>
+            <input type="text" name="pseudo">
+            <br><br>
+            <textarea name="message" class="message"></textarea>
+            <br>
+            <input type="submit" name="envoyer" class="envoyer">
 
+        </form>
+        <section id="messages"></section>
+        <script>
+            setInterval('loadmessage()',500);
+            function loadmessage(){
+                $('#messages').load('load_message.php');
+            }
+        </script>
+</div>
+
+</div>
 <script>
     function changeVideo(videoSrc, videoTitle, audioSrc) {
         var videoPlayer = document.getElementById('videoPlayer');
@@ -131,6 +174,7 @@ try {
 
     setInterval(fetchMicrophoneData, 5000);
 </script>
+
 </body>
 </html>
 
