@@ -1,7 +1,10 @@
 <?php include 'header.php'; ?>
 <!DOCTYPE html>
 <html>
-<br>
+    <header>
+        <title>Paris</title>
+        <link rel="stylesheet" href="PageParis.css">
+    </header>
 
 <body>
     <form id="myform" action="traitementparis.php" method="post">
