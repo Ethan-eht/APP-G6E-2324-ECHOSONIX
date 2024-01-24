@@ -22,6 +22,21 @@
             background-color: #f2f2f2;
             font-family: Arial, sans-serif;
         }
+
+        .delete {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        .delete:hover {
+            background-color: #cc0000;
+            color: white;
+        }
     </style>
 
 </head>
@@ -70,7 +85,7 @@
                         <?php echo $resultat['pourcentage']; ?>
                     </td>
                     <td>
-                        <form action="validate_bet.php" method="post">
+                        <form action="delete_bet.php" method="get">
                             <input type="hidden" name="id" value="<?php echo $resultat['idparis']; ?>">
                             <input type="submit" value="Valider">
                         </form>
