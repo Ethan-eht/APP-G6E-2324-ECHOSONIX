@@ -1,57 +1,19 @@
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
-header
-{
-  background-color: 	rgb(61,119,68);
-  color: #fff;
-  padding: 2%;
-}
-nav ul
-{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-nav ul li
-{
-  display: inline-block;
-  margin-right: 20px;
-}
-nav ul li a
-{
-  color: #fff;
-  text-decoration: none;
-}
-a::before
-{
- 
-  content: '';
-  position: absolute;
-  background: white;
-  filter: blur(5px);
-  width: 0px;
-  height: 120%;
-  left: 0;
-  transition: .2s all;
-  z-index: -1;
-}
-a:hover::before
-{
-  width: 100%;
-}
-a
-{
+
+
+
+
+
+a {
   font-size: 150%;
   text-decoration: none;
   position: relative;
   transition: .2s all;
   z-index: 1;
 }
-a:hover
-{
-  color: rgb(61,119,68);
-}
+
 
 
 .video-container {
@@ -64,53 +26,60 @@ video {
   height: auto;
   display: block;
 }
+
 .conteneur-video {
-display: flex;
-align-items: flex-start;
-justify-content: space-between;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .video-list {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background-color: #f1f1f1;
+  padding: 10px;
 }
 
 .video-item {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .volume-controls {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .volume-slider {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-h3, h4, h5,h6 {
-font-size: 20px; 
+h3,
+h4,
+h5,
+h6 {
+  font-size: 20px;
 }
 
 .video-container {
-position: relative;
+  position: relative;
 }
 
 
 .video-container button {
-position: absolute;
-top: 20px; 
-right: 150px; 
-padding: 10px 20px; 
-background-color: green; 
-color: black; 
-border: none; 
-font-size: 18px; 
-border-radius: 5px; 
+  position: absolute;
+  top: 20px;
+  right: 150px;
+  padding: 10px 20px;
+  background-color: green;
+  color: black;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
 }
+
 .chat_video_mess {
-display: flex;
+  display: flex;
 }
 
 
@@ -119,7 +88,32 @@ display: flex;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.envoyer {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.message {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 2px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
   
-  }
-
-
+}
