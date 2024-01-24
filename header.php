@@ -19,8 +19,8 @@
                 <li><a href="contact.php">Contact</a></li>
                 <?php
                 session_start();
-                $bdd = new PDO('mysql:host=localhost;dbname=mydb;', 'root', '');
-                if (!$_SESSION['mdp']) {
+                include 'dbconnect.php';
+                if(!isset($_SESSION['user_id'])) {
                     echo '<li><a href="inscription.php" class="inscription">Inscription</a></li>';
                     echo '<li><a href="connexion.php" class="connexion">Connexion</a></li>';
                 } else {
