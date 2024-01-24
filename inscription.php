@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="stylelucas.css">
 
+    
+
     <?php
 
     include 'header.php';
@@ -19,7 +21,15 @@
     ?>
 
 </head>
+<style>
+    .error {
+    color: red;
+    display: block;
+    margin-top: 8px;
+    display: none;
+}
 
+</style>
 
 <body>
 
@@ -78,5 +88,6 @@
 
 
 </body>
+<script src="index.js"></script>
 
 </html>
