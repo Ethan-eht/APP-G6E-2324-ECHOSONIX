@@ -1,0 +1,420 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 200px;
+}
+
+.container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.container h2 {
+    color: #333;
+}
+
+.container label {
+    color: #555;
+}
+
+.container input[type="text"],
+.container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+.question {
+    background-color: #f0f0f0;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.question:hover {
+    background-color: #ddd;
+}
+
+.question:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.faq-title {
+    color: white;
+}
+
+
+.active:after {
+    content: "\2212";
+}
+
+.answer {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border: black 2px solid;
+    border-radius: 25%;
+}
+
+.header h1 {
+    color: white;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.dashboard-button {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.manage-users {
+    background-color: #FF6384;
+    color: white;
+}
+
+.manage-events {
+    background-color: #36A2EB;
+    color: white;
+}
+
+.manage-chat {
+    background-color: #FFCE56;
+    color: white;
+}
+
+.manage-bet {
+    background-color: #4BC0C0;
+    color: white;
+}
+
+.manage-faq {
+    background-color: #9966FF;
+    color: white;
+}
+
+.manage-infos {
+    background-color: #FF9F40;
+    color: white;
+}
+
+.logout-button {
+    background-color: #FF0000;
+    color: white;
+}
+
+.dashboard-button-link {
+    background-color: #0000FF;
+    color: white;
+}
+
+.logout-button-dashboard {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout-button-dashboard button {
+    width: 300px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #ca0d36;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.manage-users:hover,
+.manage-events:hover,
+.manage-chat:hover,
+.manage-bet:hover,
+.manage-faq:hover,
+.manage-infos:hover,
+.logout-button:hover,
+.dashboard-button-link:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.echo-sonix-button {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: auto;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-button {
+    width: 150px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.user-list {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.user-list p {
+    margin-bottom: 10px;
+}
+
+.user-list a {
+    text-decoration: none;
+}
+
+.user-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.reset-button {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #e0e0e0;
+}
+
+.delete {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.delete:hover {
+    background-color: #cc0000;
+    color: white;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.match,
+.result {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.team {
+    flex: 1;
+}
+
+.score {
+    flex: 0 0 50px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.match,
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin-bottom: 5px;
+}
+
+.add-match-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-match-button:hover {
+    background-color: #45a049;
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+}
+
+
+
+.live .match {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.match1,
+.match2,
+.match3 {
+    display: flex;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}

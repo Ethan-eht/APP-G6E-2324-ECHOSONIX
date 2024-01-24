@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_chat.css">
+    <title>Chat en ligne</title>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+            <!-- Les messages du chat seront affichés ici -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Entrez votre message">
+            <button onclick="sendMessage()">Envoyer</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+    var messageInput = document.getElementById('messageInput');
+    var chatMessages = document.getElementById('chatMessages');
+
+    if (messageInput.value.trim() !== '') {
+        var message = document.createElement('div');
+        message.className = 'message';
+        message.textContent = messageInput.value;
+
+        chatMessages.appendChild(message);
+
+        // Effacer le champ de saisie après l'envoi du message
+        messageInput.value = '';
+
+        // Faire défiler la boîte de messages vers le bas pour afficher le dernier message
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+}
+    </script>
+</body>
+</html>
+
+<!-- <script>
+    // Date et heure du début du match (remplacez ceci par la date réelle du début du match) (2023-12-21T12:15:00)
+    var dateDebutMatch = new Date('2023-03-21T12:15:00');
+
+    // Fonction pour vérifier si l'utilisateur peut accéder à la page de paris
+    function peutAccederALaPage() {
+        var maintenant = new Date();
+        return maintenant < dateDebutMatch;
+    }
+
+    // Vérifier si l'utilisateur peut accéder à la page
+    if (peutAccederALaPage()) {
+        // L'utilisateur peut accéder à la page, afficher le contenu
+        document.getElementById('parisPage').style.display = 'block';
+    } else {
+        // L'utilisateur ne peut pas accéder à la page, afficher un message ou rediriger
+        document.body.innerHTML = '<h1>Désolé, la page de paris n\'est pas encore disponible.</h1>';
+    }
+</script> -->

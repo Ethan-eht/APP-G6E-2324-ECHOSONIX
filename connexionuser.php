@@ -1,7 +1,17 @@
 <?php
 session_start();
 
-include 'dbconnect.php';
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+try {
+    $bdd = new PDO("mysql:host=$servername;dbname=mydb", $username, $password);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e){
+    echo "Erreur : ". $e->getMessage();
+}
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
