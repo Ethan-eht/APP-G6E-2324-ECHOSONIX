@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>FAQ Page</title>
-    <link rel="stylesheet" href="karl.css">
+    <link rel="stylesheet" href="stylefaq.css">
 
     <?php include 'header.php'; ?>
 
