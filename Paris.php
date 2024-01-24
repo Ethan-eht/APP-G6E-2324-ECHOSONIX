@@ -1,4 +1,6 @@
-<?php include 'header.php'; ?>
+<?php 
+session_start();
+include 'header.php'; ?>
 <!DOCTYPE html>
 <html>
 <title>Paris</title>
@@ -39,7 +41,7 @@
                 <option value="">Choix de l'équipe</option>
                 <?php
                 include 'dbconnect.php';
-                $id_element = 1;
+                $id_element = $_SESSION['user_id'];
                 $requete_select = $bdd->prepare("SELECT equipe_1 FROM evenement WHERE idEvenement = :id_element");
                 $requete_select->execute(array('id_element' => $id_element));
                 $resultat = $requete_select->fetch(PDO::FETCH_ASSOC);
