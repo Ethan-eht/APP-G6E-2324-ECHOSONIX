@@ -14,8 +14,8 @@ include 'dbconnect.php';
 
         $pseudo = $_POST['pseudo'];
 
-        $mdp = $_POST['mdp'];
-
+        $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
+        
         $email= $_POST['email'];
 
         $id= $_SESSION['id'];

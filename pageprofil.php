@@ -54,9 +54,6 @@ try {
         <label for="email">Email</label>
         <div required disabled=true><?php echo $_SESSION['mail'] ?></div>
         <br>
-        <label for="mdp">Mot de passe </label>
-        <div required disabled=true><?php echo $_SESSION['mdp'] ?></div>
-        <br>
         <a href="modifications.php">Modifier</a>
     </form>
 
