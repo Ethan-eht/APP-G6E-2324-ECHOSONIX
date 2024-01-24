@@ -54,11 +54,11 @@
         <span class="error" id="pseudoError"></span>
         <br>
         <label for="email">Votre Email</label>
-        <input type="email" id="email" name="email" placeholder="Entrez votre email..." class="txt" >
+        <input type="email" id="email" name="email" placeholder="Entrez votre email..." class="txt" requierd>
         <span class="error" id="emailError"></span>
         <br>
         <label for="mdp">Votre Mot de passe</label>
-        <input type="password" id="mdp" name="mdp" placeholder="Entrez votre mdp..." class="txt">
+        <input type="password" id="mdp" name="mdp" placeholder="Entrez votre mdp..." class="txt" requierd>
         <span class="error" id="mdpError"></span>
         <br>
         <button type="submit" value="M'inscrire" name="ok" class="btn" > M'inscrire </button>
