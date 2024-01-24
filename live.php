@@ -60,7 +60,7 @@ try {
 
 <div class="chat_video_mess">
 <div class="video-container">
-    <a href="cyriaqueetsamerde.html">
+    <a href="Echo_Sonix_Statistiques_FR_AR.php">
         <button>Statistique</button>
     </a>
     <video id="videoPlayer" controls>
