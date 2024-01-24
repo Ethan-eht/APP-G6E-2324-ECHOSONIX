@@ -1,7 +1,8 @@
 <?php include 'header.php'; ?>
 <!DOCTYPE html>
 <html>
-<br>
+<title>Paris</title>
+<link rel="stylesheet" href="PageParis.css">
 
 <body>
     <form id="myform" action="traitementparis.php" method="post">
@@ -30,7 +31,7 @@
             }
             ?>
             <br><br>
-            <button href="Echo_Sonix_Statistiques_FR_AR.php"> Accéder aux statistiques</button>
+            <button> <a href="Echo_Sonix_Statistiques_FR_AR.php" style="text-decoration: none; color: white;"> Accéder aux statistiques</a></button>
             <br>
 
             <h4>Choisissez l'équipe sur lequel vous voulez parier :</h4>

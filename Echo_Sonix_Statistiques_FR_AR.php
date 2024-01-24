@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <?php include 'header.php'; ?>
     <head>
         <title>Echo-Sonix</title>
         <meta charset="utf-8">
@@ -7,8 +8,6 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
-        <header>
-        </header>
 
         <section class="bandeau_haut_de_pages">
             <div class="score_affichage">

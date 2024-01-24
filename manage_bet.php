@@ -75,8 +75,8 @@
                             <input type="hidden" name="id" value="<?php echo $resultat['idparis']; ?>">
                             <input type="submit" value="Valider">
                         </form>
-                        <form action="delete_bet.php" method="post">
-                            <input type="hidden" name="id" value="<?php echo $resultat['idparis']; ?>">
+                        <form action="delete_bet.php" method="get">
+                            <input type="hidden" name="idparis" value="<?php echo $resultat['idparis']; ?>">
                             <input type="submit" value="Supprimer" class="delete">
                         </form>
                     </td>

@@ -1,8 +1,8 @@
 <?php
 include 'dbconnect.php';
 
-if(isset($_GET['idparis'])) {
-    $id = $_GET['idparis'];
+if(isset($_POST['idparis'])) {
+    $id = $_POST['idparis'];
 
     // Prepare a delete statement
     $sql = "DELETE FROM bets WHERE idparis = :idparis";
@@ -24,4 +24,3 @@ if(isset($_GET['idparis'])) {
 } else {
     echo "No id provided to delete";
 }
-?>
