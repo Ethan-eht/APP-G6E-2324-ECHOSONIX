@@ -1,14 +1,13 @@
 <?php
 include 'dbconnect.php';
-
-if(isset($_POST['idparis'])) {
-    $id = $_POST['idparis'];
+if(isset($_GET['idparis'])) {
+    $id = $_GET['idparis'];
 
     // Prepare a delete statement
-    $sql = "DELETE FROM bets WHERE idparis = :idparis";
+    $sql = "DELETE FROM paris WHERE idparis = :idparis";
 
     // Prepare your SQL statement
-    $stmt = $pdo->prepare($sql);
+    $stmt = $bdd->prepare($sql);
 
     // Bind parameters
     $stmt->bindParam(':idparis', $id, PDO::PARAM_INT);

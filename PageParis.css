@@ -9,13 +9,7 @@
     width: 50%;
     border-radius: 10%;
 }
-header
-{
-    background-color: 	rgb(61,119,68);
-    color: #fff;
-    padding: 2%;
-    width: 100%;
-}
+
 h1, h2, h4
 {
     color: #333;
@@ -41,35 +35,17 @@ nav ul li a
     color: #fff;
     text-decoration: none;
 }
-a::before
-{
-   
-    content: '';
-    position: absolute;
-    background: white;
-    filter: blur(5px);
-    width: 0px;
-    height: 120%;
-    left: 0;
-    transition: .2s all;
-    z-index: -1;
-}
-a:hover::before
-{
-    width: 100%;
-}
+
 a
 {
-    font-size: 150%;
+    font-size: 130%;
     text-decoration: none;
     position: relative;
     transition: .2s all;
     z-index: 1;
 }
-a:hover
-{
-    color: rgb(61,119,68);
-}
+
+
 button {
     background-color: #4CAF50;
     color: #fff;
