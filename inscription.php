@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="stylelucas.css">
 
-    <script src="index.js"></script>
+    
 
     <?php
 
@@ -80,5 +80,6 @@
 
 
 </body>
+<script src="index.js"></script>
 
 </html>
