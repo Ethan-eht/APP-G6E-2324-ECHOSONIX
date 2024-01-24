@@ -21,7 +21,15 @@
     ?>
 
 </head>
+<style>
+    .error {
+    color: red;
+    display: block;
+    margin-top: 8px;
+    display: none;
+}
 
+</style>
 
 <body>
 
