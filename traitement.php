@@ -16,13 +16,13 @@ include 'dbconnect.php';
 
         $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
         
-        $email= $_POST['email'];
+        $mail= $_POST['mail'];
 
-        $id= $_SESSION['id'];
+        $id= $_SESSION['idutilisateurs'];
 
 
 
-            $requete = $bdd->prepare("UPDATE user SET pseudo = :pseudo, nom = :nom, prenom = :prenom, mdp = :mdp, email = :email WHERE id = :id");
+            $requete = $bdd->prepare("UPDATE utilisateurs SET pseudo = :pseudo, nom = :nom, prenom = :prenom, mdp = :mdp, mail = :mail WHERE idutilisateurs = :id");
 
             $requete->execute (
     
@@ -36,7 +36,7 @@ include 'dbconnect.php';
     
                     "mdp"=> $mdp,
     
-                    "email"=> $email,
+                    "mail"=> $mail,
 
                     "id"=> $id,
      

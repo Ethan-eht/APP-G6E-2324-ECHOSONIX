@@ -5,7 +5,8 @@ include 'dbconnect.php';
 
 
 try {
-    $stmt = $bdd->prepare("SELECT nom, prenom, pseudo,mail,mdp,idutilisateurs FROM utilisateurs");
+    $stmt = $bdd->prepare("SELECT nom, prenom, pseudo, mail, mdp, idutilisateurs FROM utilisateurs WHERE idutilisateurs = :user_id");
+    $stmt->bindParam(':user_id', $_SESSION['user_id']);
     $stmt->execute();
 
     // set the resulting array to associative
@@ -41,8 +42,8 @@ try {
 <body>
     <br>
     <h1> Mon Profil</h1>
-    <form method="get" action="traitement.php">
-        <label for="">Nom</label>
+    <form method="post" action="traitement.php">
+        <label for="ok">Nom</label>
         <div required disabled=true><?php echo $_SESSION['nom'] ?></div>
         <br>
         <label for="pseudo">Pseudo</label>

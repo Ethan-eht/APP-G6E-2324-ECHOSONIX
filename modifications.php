@@ -25,7 +25,7 @@ include "header.php";
         <input type="text" id="pseudo" name="pseudo" value="<?php echo $_SESSION['pseudo'] ?>">
         <br>
         <label for="email">Votre email</label>
-        <input type="text" id="email" name="email" value="<?php echo $_SESSION['mail'] ?>">
+        <input type="text" id="mail" name="mail" value="<?php echo $_SESSION['mail'] ?>">
         <br>
         <label for="mdp">Votre mdp </label>
         <input type="password" id="mdp" name="mdp">
